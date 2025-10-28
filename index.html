@@ -111,6 +111,8 @@
   <a href="https://pan.quark.cn/s/3344d23e48a8" class="quick-link" title="Source Code">Code</a>
   <a href="https://shop1619956412.v.weidian.com/?userid=1619956412&spider_token=2720" class="quick-link" title="Gift">Gift</a>
 -->
+  <audio id="bg-music" src="HBD.mp3" autoplay loop muted></audio>
+	
   <div id="ui"></div>
 
   <script>
@@ -138,6 +140,11 @@
       love.appendChild(h);
       ui.appendChild(love);
     }
+    document.addEventListener('click', () => {
+    const audio = document.getElementById('bg-music');
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
   </script>
 </body>
 </html>
